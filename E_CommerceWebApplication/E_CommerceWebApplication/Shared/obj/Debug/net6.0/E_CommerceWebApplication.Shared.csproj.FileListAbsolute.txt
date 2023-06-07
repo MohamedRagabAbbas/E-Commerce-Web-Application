@@ -1,0 +1,12 @@
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\bin\Debug\net6.0\E_CommerceWebApplication.Shared.deps.json
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\bin\Debug\net6.0\E_CommerceWebApplication.Shared.dll
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\bin\Debug\net6.0\E_CommerceWebApplication.Shared.pdb
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\obj\Debug\net6.0\E_CommerceWebApplication.Shared.csproj.AssemblyReference.cache
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\obj\Debug\net6.0\E_CommerceWebApplication.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\obj\Debug\net6.0\E_CommerceWebApplication.Shared.AssemblyInfoInputs.cache
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\obj\Debug\net6.0\E_CommerceWebApplication.Shared.AssemblyInfo.cs
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\obj\Debug\net6.0\E_CommerceWebApplication.Shared.csproj.CoreCompileInputs.cache
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\obj\Debug\net6.0\E_CommerceWebApplication.Shared.dll
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\obj\Debug\net6.0\refint\E_CommerceWebApplication.Shared.dll
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\obj\Debug\net6.0\E_CommerceWebApplication.Shared.pdb
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Shared\obj\Debug\net6.0\ref\E_CommerceWebApplication.Shared.dll

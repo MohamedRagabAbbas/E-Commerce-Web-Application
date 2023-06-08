@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using E_CommerceWebApplication.Shared.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace E_CommerceWebApplication.Server.Data
 {
@@ -8,6 +9,7 @@ namespace E_CommerceWebApplication.Server.Data
         {
 
         }
-        
+        public DbSet<Product> Products { get; set; }
+
     }
 }

@@ -200,7 +200,7 @@ else
 
 @code{
     [Parameter]
-    public int pageNumber { get; set; } = 1;
+    public int pageNumber { get; set; } 
 
     [Parameter]
     public string categoryName { get; set; } = string.Empty;
@@ -210,13 +210,13 @@ else
     static int lastMethod = 0;
     protected override async Task OnInitializedAsync()
     {
-        lastMethod = 0;
+        pageNumber = 1;
         await ProductService.GetProducts(1);
     }
 
     protected override async Task OnParametersSetAsync()
     {
-        if(string.IsNullOrWhiteSpace(categoryName))
+        if(string.IsNullOrWhiteSpace(categoryName)||string.IsNullOrEmpty(categoryName))
             await ProductService.GetProducts(pageNumber);
         else   
             await ProductService.GetProductsByCategory(categoryName,pageNumber);

@@ -822,3 +822,4 @@ D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWeb
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\refint\E_CommerceWebApplication.Client.dll
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\E_CommerceWebApplication.Client.pdb
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\ref\E_CommerceWebApplication.Client.dll
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\scopedcss\Pages\Product.razor.rz.scp.css

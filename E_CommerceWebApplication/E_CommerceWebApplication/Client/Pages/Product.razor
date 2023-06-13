@@ -1,0 +1,89 @@
+﻿@using E_CommerceWebApplication.Client.Services.ProductService
+
+@inject IProductService ProductService
+@page "/displayedProducts/{categoryName}/{pageNumber:int}"
+
+
+
+
+ <div style="margin-top:60px">
+<h1 class="col-12  text-center m-3 " style="color:#0d6efd"><span class="LetterC" style="font-size:60px; color:#ffd35a; ; text-decoration:underline">P</span>roducts </h1>
+ </div>
+
+ @if(ProductService.displayedProducts.Data ==null)
+ {
+    <span>Loading...</span>
+}
+else
+{
+     <div class="row productContainer " style="margin-right: auto; margin-left: auto;" >
+         @foreach(var item in ProductService.displayedProducts.Data.products)
+         {
+            @if(item!=null)
+            {
+                <div class="page-wrapper col-4">
+              <div class="page-inner">
+                <div class="row">
+                  <div class="el-wrapper">
+                    <div class="box-up">
+                      <img class="img" src="@item.ProductImageUrl" alt="">
+                      <div class="img-info">
+                        <div class="info-inner">
+                          <span class="p-name">@item.ProductName</span>
+                          <span class="p-company">@item.Brand</span>
+                        </div>
+                        <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                      </div>
+                    </div>
+                    <div class="box-down">
+                      <div class="h-bg">
+                        <div class="h-bg-inner"></div>
+                      </div>
+                      <a class="cart" href="#">
+                        <span class="price">@item.ProductPrice</span>
+                        <span class="add-to-cart">
+                          <span class="txt">Add in cart</span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }  
+         }
+     </div>
+     <div class=" container" style="margin-right: auto; margin-left: auto; width:500px ">
+        @for(var i =1;i<=ProductService.displayedProducts.Data.numberOfPages;i++)
+        {
+            var iCopy = i;
+            <a class="btn bg-danger m-2" href="/displayedProducts/ /@iCopy" >@i</a>
+        }
+    </div>
+}
+
+
+@code {
+    [Parameter]
+    public int pageNumber { get; set; } 
+
+    [Parameter]
+    public string categoryName { get; set; } = string.Empty;
+
+
+    //string lastCategory = " ";
+    static int lastMethod = 0;
+    protected override async Task OnInitializedAsync()
+    {
+        pageNumber = 1;
+        await ProductService.GetProducts(1);
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if(string.IsNullOrWhiteSpace(categoryName)||string.IsNullOrEmpty(categoryName))
+            await ProductService.GetProducts(pageNumber);
+        else   
+            await ProductService.GetProductsByCategory(categoryName,pageNumber);
+    }
+}

@@ -197,14 +197,14 @@
       "netstandard.dll": "sha256-CgGkoZQx73t3qchcsu85kgBcgrjNEOiudArOwKNb18k=",
       "System.Private.CoreLib.dll": "sha256-6nUSjiT7okMlkN897OnDypwppYuK7JxTahOClXkAuwE=",
       "E_CommerceWebApplication.Shared.dll": "sha256-nU8mjzNoHjvVBlKO6FDle4UqzepfkjucehMoB21hsRU=",
-      "E_CommerceWebApplication.Client.dll": "sha256-Xa1gpyV+1nITF3b23pbNnD16w78vSrjrsuFzDINEG+g="
+      "E_CommerceWebApplication.Client.dll": "sha256-NoALBKtFzd533HCUEVHqvnHyPFm5HPbPJ\/D1FmgAy5g="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "E_CommerceWebApplication.Shared.pdb": "sha256-8fHDzsjeaeXdXFwg5ZO8Igpugkd1FGJe8QkjZD5mWvQ=",
-      "E_CommerceWebApplication.Client.pdb": "sha256-lwp3vs5I1Wo5SgPrX5Rq4d4KGuJ70UyWEWa4+aTLZy4="
+      "E_CommerceWebApplication.Client.pdb": "sha256-Et6F1qSBm1irIvyFz2q0+q5KZZWWK5Txk4oDYdsB7\/E="
     },
     "runtime": {
       "dotnet.6.0.16.cn6zbt2udq.js": "sha256-GT2gK+GjOisRXJY+9yh6H8s6K\/KDIsaFMFIgWvAnttY=",

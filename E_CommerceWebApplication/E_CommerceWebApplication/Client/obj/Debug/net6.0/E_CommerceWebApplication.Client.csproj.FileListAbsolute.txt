@@ -814,7 +814,6 @@ D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWeb
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\staticwebassets.development.json
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\scopedcss\Pages\Index.razor.rz.scp.css
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\scopedcss\bundle\E_CommerceWebApplication.Client.styles.css
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\scopedcss\projectbundle\E_CommerceWebApplication.Client.bundle.scp.css
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\E_CommerceWebApplication.Client.csproj.CopyComplete
@@ -823,3 +822,6 @@ D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWeb
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\E_CommerceWebApplication.Client.pdb
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\ref\E_CommerceWebApplication.Client.dll
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\scopedcss\Pages\Product.razor.rz.scp.css
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\scopedcss\Pages\Home.razor.rz.scp.css
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\scopedcss\Pages\Category.razor.rz.scp.css
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Client\obj\Debug\net6.0\scopedcss\Pages\Footer.razor.rz.scp.css

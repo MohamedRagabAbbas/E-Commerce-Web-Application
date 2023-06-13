@@ -46,6 +46,20 @@ namespace E_CommerceWebApplication.Server.Controllers
             return Ok(response);
         }
 
+        [HttpGet("suggested/{input}")]
+        public async Task<ActionResult<ServiceResponse<List<string>>>> SuggestedWords(string input)
+        {
+            var response = await _productService.SuggestedWords(input);
+            return Ok(response);
+        }
+
+        [HttpGet("search/{input}/{pageNumber}")]
+        public async Task<ActionResult<ServiceResponse<DisplayedProducts>>> Search(string input, int pageNumber)
+        {
+            var response = await _productService.Search(input, pageNumber);
+            return Ok(response);
+        }
+
 
     }
 

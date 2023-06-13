@@ -8,6 +8,9 @@ namespace E_CommerceWebApplication.Server.Services.ProductService
         public Task<ServiceResponse<DisplayedProducts>> GetProductsAsync(int pgaeNumber);
         public Task<ServiceResponse<DisplayedProducts>> GetProductsByCategoryAsync(string categoryName, int pgaeNumber);
 
+        public Task<ServiceResponse<List<string>>> SuggestedWords(string input);
+        public Task<ServiceResponse<DisplayedProducts>> Search(string input, int pgaeNumber);
+
 
 
         public Task<ServiceResponse<Product>> GetProductByIdAsync(int Id);

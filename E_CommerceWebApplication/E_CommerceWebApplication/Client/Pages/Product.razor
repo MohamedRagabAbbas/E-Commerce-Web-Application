@@ -2,6 +2,7 @@
 
 @inject IProductService ProductService
 @page "/displayedProducts/{categoryName}/{pageNumber:int}"
+@page "/displayedProducts/search/{input}"
 @page "/"
 
 
@@ -65,10 +66,12 @@ else
 
 @code {
     [Parameter]
-    public int pageNumber { get; set; } 
+    public int pageNumber { get; set; } = 1;
 
     [Parameter]
     public string categoryName { get; set; } = string.Empty;
+    [Parameter]
+    public string input { get; set; } = string.Empty;
 
 
     //string lastCategory = " ";
@@ -81,9 +84,17 @@ else
 
     protected override async Task OnParametersSetAsync()
     {
-        if(string.IsNullOrWhiteSpace(categoryName)||string.IsNullOrEmpty(categoryName))
-            await ProductService.GetProducts(pageNumber);
-        else   
-            await ProductService.GetProductsByCategory(categoryName,pageNumber);
+        if(string.IsNullOrEmpty(input))
+        {
+            if(string.IsNullOrWhiteSpace(categoryName)||string.IsNullOrEmpty(categoryName))
+                await ProductService.GetProducts(pageNumber);
+            else   
+                await ProductService.GetProductsByCategory(categoryName,pageNumber);
+        }
+        else
+        {
+            await ProductService.Search(input, pageNumber==0?1:pageNumber);
+        }
+
     }
 }

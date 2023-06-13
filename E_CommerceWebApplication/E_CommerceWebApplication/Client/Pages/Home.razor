@@ -1,4 +1,6 @@
-﻿<!--header section start -->
+﻿@using E_CommerceWebApplication.Client.Services.ProductService
+@inject IProductService productService
+<!--header section start -->
       <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-dark bg-dark">
@@ -54,8 +56,24 @@
                         </div>
                         <div class="button_main">
                             <a class="all_text whenHover" href="/displayedProducts/ /1" >All</a>
-                            <input type="text" class="Enter_text" placeholder="Enter keywords" name="">
-                            <button class="search_text">Search</button></div>
+                            <input type="search" list="suggestions" class="Enter_text" placeholder="Enter keywords" name="" @bind-value="SearchWord" @bind-value:event="oninput" @onkeyup="Suggestions">
+                            <datalist id="suggestions" >
+                                @if((productService.Words.Data)!=null)
+                                {
+                                    @foreach (var item in productService.Words.Data)
+								        {
+                                            if(item!=null)
+                                            {
+                                                <option value="@item" ></option>
+                                            }
+                                    }
+                                }
+                                else
+                                {
+                                    <option value="...."></option>
+                                }
+                            </datalist>
+                            <a class="search_text" href="/displayedProducts/search/@SearchWord">Search</a></div>
                      </div>
                   </div>
                </div>
@@ -71,5 +89,16 @@
       </div>
 
 @code {
+    public string SearchWord { get; set; } = string.Empty;
+    public async Task Suggestions()
+	{
+        if(!string.IsNullOrEmpty(SearchWord))
+		    await productService.SuggestedWords(SearchWord);
+	}
 
+ //   public async Task SearchForInput()
+	//{
+ //       if(!string.IsNullOrEmpty(SearchWord))
+	//	    await productService.Search(SearchWord,1);
+	//}
 }

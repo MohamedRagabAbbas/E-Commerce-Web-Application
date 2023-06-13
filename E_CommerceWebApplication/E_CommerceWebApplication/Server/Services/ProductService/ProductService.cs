@@ -12,14 +12,18 @@ namespace E_CommerceWebApplication.Server.Services.ProductService
             dbContext = _dbContext;
         }
 
-        
+
         // Get Method
-        public async Task<ServiceResponse<List<Product>>> GetProductsByCategoryAsync(string categoryName)
+        public async Task<ServiceResponse<DisplayedProducts>> GetProductsByCategoryAsync(string categoryName, int pgaeNumber)
         {
-            var prodcuts = await dbContext.Products.Where(p=> p.Category.CategoryName.Equals(categoryName)).ToListAsync();
+            int _numberOfProducts = (await dbContext.Products.Where(p => p.Category.CategoryName.Equals(categoryName)).ToListAsync()).Count;
+            int _numberOfPages = (int)Math.Ceiling(_numberOfProducts / 6.0);
+            var prodcuts = await dbContext.Products.Where(p => p.Category.CategoryName.Equals(categoryName)).Skip((pgaeNumber - 1) * 6).Take(6).ToListAsync();
+            var displayedProducts = new DisplayedProducts() { numberOfPages = _numberOfPages, pageNumber = pgaeNumber, products = prodcuts };
+
             if (prodcuts == null)
             {
-                return new ServiceResponse<List<Product>>
+                return new ServiceResponse<DisplayedProducts>
                 {
                     Data = null,
                     Message = "No Product Found",
@@ -28,9 +32,9 @@ namespace E_CommerceWebApplication.Server.Services.ProductService
             }
             else
             {
-                return new ServiceResponse<List<Product>>
+                return new ServiceResponse<DisplayedProducts>
                 {
-                    Data = prodcuts,
+                    Data = displayedProducts,
                     Message = "Product Found",
                     Success = true
                 };
@@ -60,10 +64,37 @@ namespace E_CommerceWebApplication.Server.Services.ProductService
             }
         }
 
-        public async Task<ServiceResponse<List<Product>>> GetProductsAsync()
+        public async Task<ServiceResponse<DisplayedProducts>> GetProductsAsync(int pgaeNumber)
         {
-            var prodcuts = await dbContext.Products.ToListAsync();
-            if(prodcuts==null)
+            int _numberOfProducts = (await dbContext.Products.ToListAsync()).Count;
+            int _numberOfPages =(int)Math.Ceiling(_numberOfProducts / 6.0);
+            var prodcuts = await dbContext.Products.Skip((pgaeNumber - 1) * 6).Take(6).ToListAsync();
+
+            var displayedProducts = new DisplayedProducts()  { numberOfPages = _numberOfPages, pageNumber = pgaeNumber, products = prodcuts };
+            if (prodcuts == null)
+            {
+                return new ServiceResponse<DisplayedProducts>
+                {
+                    Data = null,
+                    Message = "No Products Found",
+                    Success = false
+                };
+            }
+            else
+            {
+                return new ServiceResponse<DisplayedProducts>
+                {
+                    Data = displayedProducts,
+                    Message = "Products Found",
+                    Success = true
+                };
+            }
+        }
+
+        public async Task<ServiceResponse<List<Product>>> GetProductByNameAsync(string productName)
+        {
+            var prodcuts = await dbContext.Products.Where(p => p.ProductName.StartsWith(productName)).ToListAsync();
+            if (prodcuts == null)
             {
                 return new ServiceResponse<List<Product>>
                 {
@@ -82,7 +113,5 @@ namespace E_CommerceWebApplication.Server.Services.ProductService
                 };
             }
         }
-
-        
     }
 }

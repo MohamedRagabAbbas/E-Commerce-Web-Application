@@ -12,6 +12,6 @@ namespace E_CommerceWebApplication.Shared.Models
         public string BrandName { get; set; } = String.Empty;
         public string BrandDescription { get; set; } = String.Empty;
         public string BrandImageUrl { get; set; } = String.Empty;
-        public ICollection<Product> Products { get; set; } = new List<Product>();
+       // public ICollection<Product> Products { get; set; } = new List<Product>();
     }
 }

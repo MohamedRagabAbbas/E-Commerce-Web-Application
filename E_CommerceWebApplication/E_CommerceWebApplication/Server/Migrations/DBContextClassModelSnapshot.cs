@@ -44,7 +44,7 @@ namespace E_CommerceWebApplication.Server.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brand");
+                    b.ToTable("brands");
                 });
 
             modelBuilder.Entity("E_CommerceWebApplication.Shared.Models.Category", b =>
@@ -69,7 +69,44 @@ namespace E_CommerceWebApplication.Server.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryDescription = "This is the description for T-Shirt.",
+                            CategoryImageUrl = "https://img.lovepik.com/element/40020/0359.png_300.png",
+                            CategoryName = "None"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryDescription = "This is the description for Shirt.",
+                            CategoryImageUrl = "https://img.lovepik.com/element/40022/4914.png_300.png",
+                            CategoryName = "Laptop"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryDescription = "This is the description for Jacket.",
+                            CategoryImageUrl = "https://img.lovepik.com/element/40202/6652.png_300.png",
+                            CategoryName = "Phone"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryDescription = "This is the description for Jacket.",
+                            CategoryImageUrl = "https://img.lovepik.com/element/40202/6652.png_300.png",
+                            CategoryName = "Watch"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryDescription = "This is the description for Jacket.",
+                            CategoryImageUrl = "https://img.lovepik.com/element/40202/6652.png_300.png",
+                            CategoryName = "Headphones"
+                        });
                 });
 
             modelBuilder.Entity("E_CommerceWebApplication.Shared.Models.Product", b =>
@@ -83,16 +120,13 @@ namespace E_CommerceWebApplication.Server.Migrations
                     b.Property<int?>("BrandId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CategoryId")
+                    b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<bool?>("ProductAvailable")
                         .HasColumnType("bit");
 
                     b.Property<int>("ProductBrandId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductCategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("ProductColor")
@@ -142,26 +176,312 @@ namespace E_CommerceWebApplication.Server.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 1,
+                            ProductAvailable = true,
+                            ProductBrandId = 1,
+                            ProductColor = "Red",
+                            ProductDescription = "This is the description for Product 1.",
+                            ProductDiscount = 10.0,
+                            ProductGender = "Unisex",
+                            ProductImageUrl = "https://img.lovepik.com/element/40163/9843.png_300.png",
+                            ProductMaterial = "Cotton",
+                            ProductName = "Product 1",
+                            ProductPrice = 9.9900000000000002,
+                            ProductQuantity = 100,
+                            ProductRating = 4,
+                            ProductSize = "Medium"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 2,
+                            ProductAvailable = true,
+                            ProductBrandId = 2,
+                            ProductColor = "Blue",
+                            ProductDescription = "This is the description for Product 2.",
+                            ProductDiscount = 15.0,
+                            ProductGender = "Men",
+                            ProductImageUrl = "https://img.lovepik.com/element/40020/0359.png_300.png",
+                            ProductMaterial = "Polyester",
+                            ProductName = "Product 2",
+                            ProductPrice = 19.989999999999998,
+                            ProductQuantity = 50,
+                            ProductRating = 5,
+                            ProductSize = "Large"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 1,
+                            ProductAvailable = true,
+                            ProductBrandId = 3,
+                            ProductColor = "Green",
+                            ProductDescription = "This is the description for Product 3.",
+                            ProductDiscount = 20.0,
+                            ProductGender = "Women",
+                            ProductImageUrl = "https://img.lovepik.com/original_origin_pic/18/11/27/edf7eaa41e16a9c50cf88d82dae560dd.png_wh300.png",
+                            ProductMaterial = "Silk",
+                            ProductName = "Product 3",
+                            ProductPrice = 14.99,
+                            ProductQuantity = 75,
+                            ProductRating = 4,
+                            ProductSize = "Small"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 3,
+                            ProductAvailable = true,
+                            ProductBrandId = 2,
+                            ProductColor = "Black",
+                            ProductDescription = "This is the description for Product 4.",
+                            ProductDiscount = 10.0,
+                            ProductGender = "Men",
+                            ProductImageUrl = "https://img.lovepik.com/element/40022/4914.png_300.png",
+                            ProductMaterial = "Leather",
+                            ProductName = "Product 4",
+                            ProductPrice = 29.989999999999998,
+                            ProductQuantity = 30,
+                            ProductRating = 3,
+                            ProductSize = "Medium"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 2,
+                            ProductAvailable = true,
+                            ProductBrandId = 1,
+                            ProductColor = "White",
+                            ProductDescription = "This is the description for Product 5.",
+                            ProductDiscount = 5.0,
+                            ProductGender = "Women",
+                            ProductImageUrl = "https://img.lovepik.com/element/40202/6652.png_300.png",
+                            ProductMaterial = "Cotton",
+                            ProductName = "Prodnnuct 5",
+                            ProductPrice = 24.989999999999998,
+                            ProductQuantity = 60,
+                            ProductRating = 4,
+                            ProductSize = "Large"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryId = 3,
+                            ProductAvailable = true,
+                            ProductBrandId = 3,
+                            ProductColor = "Green",
+                            ProductDescription = "This is the description for Product 3.",
+                            ProductDiscount = 20.0,
+                            ProductGender = "Women",
+                            ProductImageUrl = "https://img.lovepik.com/original_origin_pic/18/11/27/edf7eaa41e16a9c50cf88d82dae560dd.png_wh300.png",
+                            ProductMaterial = "Silk",
+                            ProductName = "Prhhoduct 3",
+                            ProductPrice = 14.99,
+                            ProductQuantity = 75,
+                            ProductRating = 4,
+                            ProductSize = "Small"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryId = 4,
+                            ProductAvailable = true,
+                            ProductBrandId = 2,
+                            ProductColor = "Blue",
+                            ProductDescription = "This is the description for Product 7.",
+                            ProductDiscount = 5.0,
+                            ProductGender = "Men",
+                            ProductImageUrl = "https://img.lovepik.com/element/40109/7776.png_300.png",
+                            ProductMaterial = "Cotton",
+                            ProductName = "Prorrduct 7",
+                            ProductPrice = 49.990000000000002,
+                            ProductQuantity = 10,
+                            ProductRating = 4,
+                            ProductSize = "Large"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryId = 5,
+                            ProductAvailable = true,
+                            ProductBrandId = 2,
+                            ProductColor = "Blue",
+                            ProductDescription = "This is the description for Product 7.",
+                            ProductDiscount = 5.0,
+                            ProductGender = "Men",
+                            ProductImageUrl = "https://img.lovepik.com/element/40109/7776.png_300.png",
+                            ProductMaterial = "Cotton",
+                            ProductName = "Prodmuct 7",
+                            ProductPrice = 49.990000000000002,
+                            ProductQuantity = 10,
+                            ProductRating = 4,
+                            ProductSize = "Large"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CategoryId = 3,
+                            ProductAvailable = false,
+                            ProductBrandId = 3,
+                            ProductColor = "Yellow",
+                            ProductDescription = "This is the description for Product 6.",
+                            ProductDiscount = 0.0,
+                            ProductGender = "Unisex",
+                            ProductImageUrl = "https://img.lovepik.com/original_origin_pic/18/12/29/b78f8119d4d12eca45c6a20ca94a8cc5.png_wh300.png",
+                            ProductMaterial = "Polyester",
+                            ProductName = "Pronduct 6",
+                            ProductPrice = 39.990000000000002,
+                            ProductQuantity = 20,
+                            ProductSize = "Small"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CategoryId = 1,
+                            ProductAvailable = true,
+                            ProductBrandId = 2,
+                            ProductColor = "Blue",
+                            ProductDescription = "This is the description for Product 7.",
+                            ProductDiscount = 5.0,
+                            ProductGender = "Men",
+                            ProductImageUrl = "https://img.lovepik.com/element/40109/7776.png_300.png",
+                            ProductMaterial = "Cotton",
+                            ProductName = "Prodhuct 7",
+                            ProductPrice = 49.990000000000002,
+                            ProductQuantity = 10,
+                            ProductRating = 4,
+                            ProductSize = "Large"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CategoryId = 3,
+                            ProductAvailable = true,
+                            ProductBrandId = 3,
+                            ProductColor = "Green",
+                            ProductDescription = "This is the description for Product 3.",
+                            ProductDiscount = 20.0,
+                            ProductGender = "Women",
+                            ProductImageUrl = "https://img.lovepik.com/original_origin_pic/18/11/27/edf7eaa41e16a9c50cf88d82dae560dd.png_wh300.png",
+                            ProductMaterial = "Silk",
+                            ProductName = "Prodtuct 3",
+                            ProductPrice = 14.99,
+                            ProductQuantity = 75,
+                            ProductRating = 4,
+                            ProductSize = "Small"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CategoryId = 2,
+                            ProductAvailable = true,
+                            ProductBrandId = 2,
+                            ProductColor = "Blue",
+                            ProductDescription = "This is the description for Product 7.",
+                            ProductDiscount = 5.0,
+                            ProductGender = "Men",
+                            ProductImageUrl = "https://img.lovepik.com/element/40109/7776.png_300.png",
+                            ProductMaterial = "Cotton",
+                            ProductName = "Produfct 7",
+                            ProductPrice = 49.990000000000002,
+                            ProductQuantity = 10,
+                            ProductRating = 4,
+                            ProductSize = "Large"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CategoryId = 1,
+                            ProductAvailable = true,
+                            ProductBrandId = 2,
+                            ProductColor = "Blue",
+                            ProductDescription = "This is the description for Product 7.",
+                            ProductDiscount = 5.0,
+                            ProductGender = "Men",
+                            ProductImageUrl = "https://img.lovepik.com/element/40109/7776.png_300.png",
+                            ProductMaterial = "Cotton",
+                            ProductName = "Prosduct 7",
+                            ProductPrice = 49.990000000000002,
+                            ProductQuantity = 10,
+                            ProductRating = 4,
+                            ProductSize = "Large"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CategoryId = 2,
+                            ProductAvailable = true,
+                            ProductBrandId = 3,
+                            ProductColor = "Green",
+                            ProductDescription = "This is the description for Product 3.",
+                            ProductDiscount = 20.0,
+                            ProductGender = "Women",
+                            ProductImageUrl = "https://img.lovepik.com/original_origin_pic/18/11/27/edf7eaa41e16a9c50cf88d82dae560dd.png_wh300.png",
+                            ProductMaterial = "Silk",
+                            ProductName = "Prodduct 3",
+                            ProductPrice = 14.99,
+                            ProductQuantity = 75,
+                            ProductRating = 4,
+                            ProductSize = "Small"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CategoryId = 4,
+                            ProductAvailable = true,
+                            ProductBrandId = 4,
+                            ProductColor = "Blue",
+                            ProductDescription = "This is the description for Product 7.",
+                            ProductDiscount = 5.0,
+                            ProductGender = "Men",
+                            ProductImageUrl = "https://img.lovepik.com/element/40109/7776.png_300.png",
+                            ProductMaterial = "Cotton",
+                            ProductName = "Prxoduct 7",
+                            ProductPrice = 49.990000000000002,
+                            ProductQuantity = 10,
+                            ProductRating = 4,
+                            ProductSize = "Large"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CategoryId = 3,
+                            ProductAvailable = true,
+                            ProductBrandId = 2,
+                            ProductColor = "Blue",
+                            ProductDescription = "This is the description for Product 7.",
+                            ProductDiscount = 5.0,
+                            ProductGender = "Men",
+                            ProductImageUrl = "https://img.lovepik.com/element/40109/7776.png_300.png",
+                            ProductMaterial = "Cotton",
+                            ProductName = "Producxt 7",
+                            ProductPrice = 49.990000000000002,
+                            ProductQuantity = 10,
+                            ProductRating = 4,
+                            ProductSize = "Large"
+                        });
                 });
 
             modelBuilder.Entity("E_CommerceWebApplication.Shared.Models.Product", b =>
                 {
                     b.HasOne("E_CommerceWebApplication.Shared.Models.Brand", "Brand")
-                        .WithMany("Products")
+                        .WithMany()
                         .HasForeignKey("BrandId");
 
                     b.HasOne("E_CommerceWebApplication.Shared.Models.Category", "Category")
                         .WithMany("Products")
-                        .HasForeignKey("CategoryId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("E_CommerceWebApplication.Shared.Models.Brand", b =>
-                {
-                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("E_CommerceWebApplication.Shared.Models.Category", b =>

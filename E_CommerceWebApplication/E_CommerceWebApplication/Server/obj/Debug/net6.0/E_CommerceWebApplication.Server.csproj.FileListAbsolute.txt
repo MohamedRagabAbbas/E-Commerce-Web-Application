@@ -50,9 +50,13 @@ D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWeb
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Microsoft.JSInterop.dll
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Microsoft.JSInterop.WebAssembly.dll
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Microsoft.OpenApi.dll
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\System.CodeDom.dll
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\System.Drawing.Common.dll
@@ -87,6 +91,7 @@ D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWeb
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\obj\Debug\net6.0\E_CommerceWebApplication.Server.AssemblyInfoInputs.cache
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\obj\Debug\net6.0\E_CommerceWebApplication.Server.AssemblyInfo.cs
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\obj\Debug\net6.0\E_CommerceWebApplication.Server.csproj.CoreCompileInputs.cache
+D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\obj\Debug\net6.0\E_CommerceWebApplication.Server.MvcApplicationPartsAssemblyInfo.cs
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\obj\Debug\net6.0\E_CommerceWebApplication.Server.MvcApplicationPartsAssemblyInfo.cache
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\obj\Debug\net6.0\E_CommerceWebApplication.Server.RazorAssemblyInfo.cache
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\obj\Debug\net6.0\E_CommerceWebApplication.Server.RazorAssemblyInfo.cs
@@ -99,8 +104,3 @@ D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWeb
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\obj\Debug\net6.0\E_CommerceWebApplication.Server.pdb
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\obj\Debug\net6.0\E_CommerceWebApplication.Server.genruntimeconfig.cache
 D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\obj\Debug\net6.0\ref\E_CommerceWebApplication.Server.dll
-D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Microsoft.OpenApi.dll
-D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\My Projects\E-Commerce-Web-Application\E_CommerceWebApplication\E_CommerceWebApplication\Server\obj\Debug\net6.0\E_CommerceWebApplication.Server.MvcApplicationPartsAssemblyInfo.cs

@@ -14,7 +14,7 @@ namespace E_CommerceWebApplication.Shared.Models
         public string ProductImageUrl { get; set; } = String.Empty;
         public double ProductPrice { get; set; } = 0.0;
         public int ProductQuantity { get; set; }
-        public int ProductCategoryId { get; set; }
+        public int CategoryId { get; set; }
         public Category? Category { get; set; } = null;
         public int ProductBrandId { get; set; }
         public  Brand? Brand { get; set; } = null;

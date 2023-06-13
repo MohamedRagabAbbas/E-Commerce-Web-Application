@@ -1,3 +1,4 @@
+using E_CommerceWebApplication.Server.Services.ProductService;
 using E_CommerceWebApplication.Server.Data;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +17,9 @@ builder.Services.AddDbContext<DBContextClass>(options =>
 // Add Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Add scope
+builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
 app.UseSwaggerUI();
